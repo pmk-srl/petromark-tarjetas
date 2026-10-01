@@ -132,6 +132,10 @@
   .lista { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 0; padding: 0; list-style: none; }
   .lista li { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; line-height: 1.35; color: var(--negro); }
   .lista li::before { content: ""; width: 6px; height: 6px; margin-top: 6px; border-radius: 50%; background: var(--celeste); flex: none; }
+  .dossier { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--celeste-oscuro); text-decoration: none; }
+  .dossier svg { width: 16px; height: 16px; stroke: currentColor; }
+  .dossier:hover { text-decoration: underline; }
+  .dossier:focus-visible { outline: 2px solid var(--celeste); outline-offset: 2px; border-radius: 4px; }
 
   /* ---------- Pie ---------- */
   footer { margin-top: auto; padding: 24px 28px 28px; padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 12px; }
@@ -220,6 +224,10 @@
         <li>Perforaciones</li>
         <li>Análisis de corrosión</li>
       </ul>
+      <a class="dossier" href="https://petromark.com.ar/wp-content/themes/gti/pdf/Dossier_Petromark.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+        Ver brochure institucional (PDF)
+      </a>
     </section>
   </main>
 
