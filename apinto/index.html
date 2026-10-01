@@ -62,7 +62,7 @@
     padding-top: calc(22px + env(safe-area-inset-top, 0px));
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
   }
   .marca { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
   .marca img { width: 140px; height: auto; display: block; }
@@ -107,7 +107,7 @@
   .empresa { font-size: 12.5px; color: var(--plata); }
 
   /* ---------- Contacto ---------- */
-  main { padding: 4px 28px 16px; display: flex; flex-direction: column; gap: 18px; }
+  main { padding: 4px 28px 10px; display: flex; flex-direction: column; gap: 16px; }
   .contacto { display: flex; flex-direction: column; }
   .fila {
     display: flex; align-items: center; gap: 16px;
@@ -128,13 +128,13 @@
 
   /* ---------- Servicios ---------- */
   .servicios { background: var(--fondo); border-radius: 14px; padding: 14px 18px; }
-  .servicios h2 { font-size: 10.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gris-texto); margin: 0 0 12px; }
+  .servicios h2 { font-size: 10.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gris-texto); margin: 0 0 10px; }
   .lista { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 0; padding: 0; list-style: none; }
   .lista li { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; line-height: 1.35; color: var(--negro); }
   .lista li::before { content: ""; width: 6px; height: 6px; margin-top: 6px; border-radius: 50%; background: var(--celeste); flex: none; }
   .dossier { display: flex; align-items: center; gap: 10px; margin-top: 12px; padding: 10px 12px; background: var(--blanco); border: 1px solid var(--gris-claro); border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--negro); text-decoration: none; }
   .dossier .flecha { margin-left: auto; width: 16px; height: 16px; stroke: var(--celeste); }
-  .firma { margin: -8px 0 0; text-align: right; font-size: 10px; letter-spacing: 0.04em; color: var(--plata); }
+  .firma { margin: -8px 0 0; text-align: right; font-size: 10px; line-height: 1; letter-spacing: 0.04em; color: var(--plata); }
   .dossier svg { width: 18px; height: 18px; stroke: var(--celeste); flex: none; }
   .dossier:hover, .dossier:active { border-color: var(--celeste); }
   .dossier:focus-visible { outline: 2px solid var(--celeste); outline-offset: 2px; border-radius: 4px; }
@@ -231,7 +231,7 @@
         <svg class="flecha" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
       </a>
     </section>
-    <p class="firma">Powered by I+D</p>
+    <p class="firma">Powered by I+D - PMK</p>
   </main>
 
   <footer>
