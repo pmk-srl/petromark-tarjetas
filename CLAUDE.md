@@ -80,4 +80,21 @@ de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos lo
 | Slug   | Nombre | Cargo | URL grabada en el tag |
 |--------|--------|-------|-----------------------|
 | `rparra` | Rolando Parra | Representante Técnico / I+D | `https://pmk-srl.github.io/petromark-tarjetas/rparra/` |
-| `jstalldecker` | Jorge Stalldecker | Gerente de Producto PC | `https://pmk-srl.github.io/petromark-tarjetas/jstalldecker/` |
+| `jstalldecker` | Jorge Stalldecker | Gerente de Producto PC/PAT | `https://pmk-srl.github.io/petromark-tarjetas/jstalldecker/` |
+| `gtwardowski` | Gustavo Twardowski | Gerente General | `https://pmk-srl.github.io/petromark-tarjetas/gtwardowski/` |
+| `sacosta` | Sandro Acosta | Gerente de Producto END | `https://pmk-srl.github.io/petromark-tarjetas/sacosta/` |
+| `aacuna` | Andrea Acuña | Líder Técnico | `https://pmk-srl.github.io/petromark-tarjetas/aacuna/` |
+| `oamache` | Oriana Amache | Representante Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/oamache/` |
+| `lamenabar` | Luis Amenabar | Representante Técnico ILAP | `https://pmk-srl.github.io/petromark-tarjetas/lamenabar/` |
+| `ecanullo` | Emilio Canullo | Responsable Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/ecanullo/` |
+| `ldedios` | Lucio De Dios | Representante Técnico | `https://pmk-srl.github.io/petromark-tarjetas/ldedios/` |
+| `ggimenez` | Gonzalo Gimenez | Representante Técnico PC/PAT NOC | `https://pmk-srl.github.io/petromark-tarjetas/ggimenez/` |
+| `fibarra` | Fernando Ibarra | Responsable de Compras, Mantenimiento y Logística | `https://pmk-srl.github.io/petromark-tarjetas/fibarra/` |
+| `jjimenez` | Jose Jimenez | Representante Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/jjimenez/` |
+| `llinares` | Lizeth Linares | Líder Técnico en Corrosión/Protección Catódica | `https://pmk-srl.github.io/petromark-tarjetas/llinares/` |
+| `lohara` | Luis Ohara | Líder Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/lohara/` |
+| `apinto` | Alejandro Pinto | Líder Técnico PAT | `https://pmk-srl.github.io/petromark-tarjetas/apinto/` |
+| `nrojo` | Norman Rojo | Supervisor Técnico | `https://pmk-srl.github.io/petromark-tarjetas/nrojo/` |
+| `ftartaglia` | Fredy Tartaglia | Responsable Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/ftartaglia/` |
+| `dtorres` | Daniel Torres | Supervisor PC | `https://pmk-srl.github.io/petromark-tarjetas/dtorres/` |
+| `yturra` | Yerimen Turra | Responsable Técnico PC y PAT | `https://pmk-srl.github.io/petromark-tarjetas/yturra/` |
