@@ -124,3 +124,4 @@ de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos lo
 | `ftartaglia` | Fredy Tartaglia | Responsable Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/ftartaglia/` |
 | `dtorres` | Daniel Torres | Supervisor PC | `https://pmk-srl.github.io/petromark-tarjetas/dtorres/` |
 | `yturra` | Yerimen Turra | Responsable Técnico PC y PAT | `https://pmk-srl.github.io/petromark-tarjetas/yturra/` |
+| `mbertotto` | Mauricio Bertotto | Líder Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/mbertotto/` |
