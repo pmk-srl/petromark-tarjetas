@@ -21,6 +21,9 @@ EDITADAS = RAIZ / "fotos_editadas"      # fotos ya retocadas (ChatGPT): tienen p
 LADO = 600                      # px del cuadrado final
 HEADROOM = 0.13                 # aire sobre la cabeza, fracción del lado
 ZOOM = 3.2                      # lado del recorte = ZOOM × ancho de la cara
+ZOOM_POR_SLUG = {                 # ajustes puntuales aprobados por el usuario (más alto = más lejos)
+    "ggimenez": 4.6,
+}
 FONDO_CENTRO = (0x4a, 0x4a, 0x4d)
 FONDO_BORDE = (0x14, 0x12, 0x10)
 
@@ -71,6 +74,26 @@ def fondo(lado):
     return Image.fromarray(img.astype(np.uint8), "RGB")
 
 
+def limpiar_bordes(rgba: Image.Image) -> Image.Image:
+    """Quita el halo del fondo original en los bordes semitransparentes (pelo) y afina la máscara.
+    1) estima el color del fondo original con los píxeles claramente de fondo,
+    2) descontamina: color = (color_mezclado - (1-a)·fondo) / a,
+    3) endurece y erosiona un poco el alfa, y lo suaviza al final."""
+    arr = np.array(rgba).astype(np.float32)
+    rgb, a = arr[..., :3], arr[..., 3:4] / 255.0
+    fondo_px = rgb[(a[..., 0] < 0.05)]
+    if len(fondo_px) > 100:
+        bg = np.median(fondo_px, axis=0)
+        mezcla = (a > 0.02) & (a < 0.98)
+        limpio = np.clip((rgb - (1 - a) * bg) / np.maximum(a, 0.02), 0, 255)
+        rgb = np.where(mezcla, limpio, rgb)
+    a2 = np.clip(a[..., 0], 0, 1) ** 1.4
+    a_img = Image.fromarray((a2 * 255).astype(np.uint8)).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.8))
+    out = Image.fromarray(rgb.astype(np.uint8), "RGB").convert("RGBA")
+    out.putalpha(a_img)
+    return out
+
+
 def ancho_cabeza(alpha):
     """Ancho de la cara: mediana del ancho de la silueta en la franja del 12% al 30%
     de la altura visible (debajo del pelo, arriba del cuello)."""
@@ -89,17 +112,15 @@ def procesar(src: Path, dst: Path):
     img.thumbnail((1600, 1600))
 
     rgba = remove(img, session=session())
-    # borde suave: leve desenfoque de la máscara
-    a_suave = rgba.getchannel("A").filter(ImageFilter.GaussianBlur(1.2))
-    rgba.putalpha(a_suave)
-    alpha = np.array(a_suave)
+    rgba = limpiar_bordes(rgba)
+    alpha = np.array(rgba.getchannel("A"))
 
     top, w_cabeza = ancho_cabeza(alpha)
     cols = np.where(alpha.max(axis=0) > 128)[0]
     filas_cabeza = alpha[top: top + int(w_cabeza * 1.2)]
     cx = int(np.mean(np.where(filas_cabeza.max(axis=0) > 128)[0])) if filas_cabeza.size else int(cols.mean())
 
-    lado = int(w_cabeza * ZOOM)
+    lado = int(w_cabeza * ZOOM_POR_SLUG.get(src.stem, ZOOM))
     x0 = int(cx - lado / 2)
     y0 = int(top - lado * HEADROOM)
 
