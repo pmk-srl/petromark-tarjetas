@@ -3,3 +3,4 @@ files.zip
 *.zip
 fotos_originales/
 fotos_editadas/
+__pycache__/
