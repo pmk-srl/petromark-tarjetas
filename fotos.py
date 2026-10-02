@@ -22,7 +22,9 @@ LADO = 600                      # px del cuadrado final
 HEADROOM = 0.10                 # aire sobre la cabeza, fracción del lado
 ZOOM = 6.0                      # lado del recorte = ZOOM × ancho de la cara
 ESPEJO = set()                     # personas cuya foto se voltea horizontalmente
-ZOOM_POR_SLUG = {}
+ZOOM_POR_SLUG = {                 # ajustes puntuales aprobados por el usuario (más alto = más lejos)
+    "ecanullo": 5.0,
+}
 FONDO_CENTRO = (0x4a, 0x4a, 0x4d)
 FONDO_BORDE = (0x14, 0x12, 0x10)
 
