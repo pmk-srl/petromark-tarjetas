@@ -60,6 +60,32 @@ mismo cambio en cada `<slug>/index.html`. Los bloques `persona` de cada uno no s
 ### "Sacá a <persona>"
 Borrar la carpeta. Avisar que el tag físico de esa persona va a quedar apuntando a un 404.
 
+### "Subí las fotos" / "procesá las fotos"
+Las fotos van en `fotos_editadas/<slug>.jpg|png` si ya vienen retocadas (ChatGPT) o en
+`fotos_originales/<slug>.jpg` si son crudas del celular; ambas carpetas están ignoradas por git. El script
+`fotos.py` las convierte al estilo de la tarjeta: recorte de fondo con IA local (modelo ISNet vía
+onnxruntime, sin rembg porque Smart App Control bloquea numba), fondo gris oscuro con viñeta,
+blanco y negro, encuadre de cabeza, hombros y algo de pecho, torso desvanecido hacia abajo, 600×600 JPEG.
+
+```powershell
+python fotos.py --preview          # genera fotos_originales/_preview/<slug>.jpg sin tocar las carpetas
+python fotos.py                    # escribe <slug>/foto.jpg para todas las que tengan carpeta
+python fotos.py ecanullo rparra    # solo esas personas
+```
+
+Procedimiento:
+1. Correr en `--preview` y mostrar al usuario un boceto (render de la tarjeta con la foto) antes
+   de publicar. Si alguna foto sale mal (recorte, encuadre, luz), avisar y no publicar esa.
+2. Con el aprobado, correr sin `--preview`, commit `Agrega fotos de <personas>` y push.
+3. Parámetros en la cabecera de `fotos.py`: `ZOOM` (3.2, más alto = más lejos), `HEADROOM`
+   (0.13), brillo (`Brightness 0.90`). Fueron ajustados con el usuario; no cambiarlos sin pedir.
+4. Pautas para la toma: pared lisa, luz de ventana de frente, celular a la altura de los ojos a
+   unos 2 metros con zoom 2x, encuadre de pecho para arriba con aire sobre la cabeza, ropa oscura,
+   modo retrato apagado. Si la persona sale más lejos, mejor: el script tiene más margen.
+
+Requiere Python 3.12 (`%LOCALAPPDATA%\Programs\Python\Python312\python.exe`) con `onnxruntime`,
+`pillow` y `numpy`.
+
 ## Cómo publicar
 
 ```bash
