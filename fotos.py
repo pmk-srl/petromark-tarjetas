@@ -96,6 +96,21 @@ def limpiar_bordes(rgba: Image.Image) -> Image.Image:
     return out
 
 
+def suavizar_piel(rgba: Image.Image, radio=2.2, umbral=14, fuerza=0.65) -> Image.Image:
+    """Alisa la textura fina (poros, arrugas leves) y respeta los bordes marcados (ojos, barba,
+    contorno). Donde la diferencia entre la imagen y su versión desenfocada es pequeña, mezcla
+    hacia la desenfocada; donde es grande (un borde real), deja la original."""
+    rgb = rgba.convert("RGB")
+    suave = rgb.filter(ImageFilter.GaussianBlur(radio))
+    a = np.array(rgb, np.float32); b = np.array(suave, np.float32)
+    detalle = np.abs(a - b).mean(axis=2, keepdims=True)
+    peso = np.clip(1 - detalle / umbral, 0, 1) * fuerza
+    out = a * (1 - peso) + b * peso
+    res = Image.fromarray(out.astype(np.uint8), "RGB").convert("RGBA")
+    res.putalpha(rgba.getchannel("A"))
+    return res
+
+
 def ancho_cabeza(alpha):
     """Ancho de la cara: mediana del ancho de la silueta en la franja del 12% al 30%
     de la altura visible (debajo del pelo, arriba del cuello)."""
@@ -162,11 +177,12 @@ def procesar(src: Path, dst: Path):
     base.alpha_composite(sombra, (0, 6))
     base.alpha_composite(recorte)
 
+    base = suavizar_piel(base)
     bn = ImageOps.grayscale(base.convert("RGB"))
     bn = ImageOps.autocontrast(bn, cutoff=0.2)
     bn = ImageEnhance.Brightness(bn).enhance(0.90)
-    bn = ImageEnhance.Contrast(bn).enhance(1.04)
-    bn = bn.filter(ImageFilter.UnsharpMask(radius=1.0, percent=35, threshold=3))
+    bn = ImageEnhance.Contrast(bn).enhance(1.0)
+    # sin realce de nitidez: marca poros y arrugas
 
     dst.parent.mkdir(parents=True, exist_ok=True)
     bn.convert("RGB").save(dst, "JPEG", quality=88, optimize=True, progressive=True)
