@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:De Dios;Lucio;;;
+FN:Lucio De Dios
+ORG:Petromark SRL
+TITLE:Representante Técnico
+TEL;TYPE=CELL,VOICE:+542993321165
+EMAIL;TYPE=WORK:lucio.dedios@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD

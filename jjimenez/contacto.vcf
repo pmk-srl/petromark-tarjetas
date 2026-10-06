@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Jimenez;Jose;;;
+FN:Jose Jimenez
+ORG:Petromark SRL
+TITLE:Representante Técnico END
+TEL;TYPE=CELL,VOICE:+542995121060
+EMAIL;TYPE=WORK:jose.jimenez@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD

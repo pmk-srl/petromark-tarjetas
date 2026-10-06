@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Rojo;Norman;;;
+FN:Norman Rojo
+ORG:Petromark SRL
+TITLE:Supervisor Técnico
+TEL;TYPE=CELL,VOICE:+542996090300
+EMAIL;TYPE=WORK:norman.rojo@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD

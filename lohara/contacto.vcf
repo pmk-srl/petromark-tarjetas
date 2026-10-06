@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Ohara;Luis;;;
+FN:Luis Ohara
+ORG:Petromark SRL
+TITLE:Líder Técnico END
+TEL;TYPE=CELL,VOICE:+542995180366
+EMAIL;TYPE=WORK:luis.ohara@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD

@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Tartaglia;Fredy;;;
+FN:Fredy Tartaglia
+ORG:Petromark SRL
+TITLE:Responsable Técnico END
+TEL;TYPE=CELL,VOICE:+542995088625
+EMAIL;TYPE=WORK:fredy.tartaglia@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/fredy-tartaglia-20320455
+END:VCARD

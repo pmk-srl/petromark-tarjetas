@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Acuña;Andrea;;;
+FN:Andrea Acuña
+ORG:Petromark SRL
+TITLE:Líder Técnico
+TEL;TYPE=CELL,VOICE:+542996039185
+EMAIL;TYPE=WORK:andrea.acuna@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD

@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Torres;Daniel;;;
+FN:Daniel Torres
+ORG:Petromark SRL
+TITLE:Supervisor PC
+TEL;TYPE=CELL,VOICE:+542996066488
+EMAIL;TYPE=WORK:daniel.torres@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD

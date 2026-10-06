@@ -301,7 +301,29 @@
     return lineas.join("\r\n");
   }
 
-  $('#btn-vcf').addEventListener('click', () => {
+  // Guardar contacto: en Android abre Contactos con los datos cargados (intent),
+  // en iPhone abre la ficha .vcf alojada en el sitio, en computadora descarga el .vcf.
+  const ua = navigator.userAgent;
+  const esIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const esAndroid = /Android/.test(ua);
+  const urlVcf = new URL("contacto.vcf", location.href).href;
+
+  function intentContacto() {
+    const e = encodeURIComponent;
+    const extras = [
+      `S.name=${e(persona.nombre + " " + persona.apellido)}`,
+      `S.phone=${e(persona.telefono)}`, "i.phone_type=2",
+      `S.email=${e(persona.email)}`, "i.email_type=2",
+      `S.company=${e(persona.empresa)}`,
+      `S.job_title=${e(persona.cargo)}`,
+      `S.postal=${e(persona.direccion)}`,
+      `S.notes=${e(persona.web + (persona.linkedin ? " · " + persona.linkedin : ""))}`,
+      `S.browser_fallback_url=${e(urlVcf)}`,
+    ];
+    return `intent:#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/contact;${extras.join(";")};end`;
+  }
+
+  function descargarVcf() {
     const blob = new Blob([vCard()], { type: "text/vcard;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -311,6 +333,12 @@
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 2000);
+  }
+
+  $('#btn-vcf').addEventListener('click', () => {
+    if (esAndroid)   { location.href = intentContacto(); return; }
+    if (esIOS)       { location.href = urlVcf; return; }
+    descargarVcf();
   });
 </script>
 </body>

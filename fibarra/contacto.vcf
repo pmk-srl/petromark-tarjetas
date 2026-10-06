@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Ibarra;Fernando;;;
+FN:Fernando Ibarra
+ORG:Petromark SRL
+TITLE:Responsable de Compras\, Mantenimiento y Logística
+TEL;TYPE=CELL,VOICE:+542994511971
+EMAIL;TYPE=WORK:fernando.ibarra@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD

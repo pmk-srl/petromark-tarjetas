@@ -13,7 +13,12 @@ una carpeta con su `index.html`; un tag NFC en su tarjeta impresa apunta a esa U
 ├── rparra/               plantilla de referencia: copiar, nunca borrar
 │   ├── index.html
 │   └── foto.jpg          opcional
-├── <slug>/index.html     una carpeta por persona
+├── <slug>/               una carpeta por persona
+│   ├── index.html
+│   ├── contacto.vcf      generado por contactos.py a partir del bloque persona
+│   └── foto.jpg          generado por fotos.py
+├── contactos.py          genera los .vcf
+├── fotos.py              procesa las fotos
 ├── tarjeta_nfc.scad      modelo 3D de la tarjeta
 ├── README.md             instrucciones de hosting, tags e impresión
 └── CLAUDE.md             este archivo
@@ -45,12 +50,15 @@ si ya está el subdominio). La tarjeta de una persona queda en `<URL base>/<slug
 2. Borrar `<slug>/foto.jpg` si existe (cada persona pone la suya).
 3. Editar el bloque `persona` en `<slug>/index.html` con los datos dados. Si falta algún dato,
    preguntar antes de inventar.
-4. Agregar la línea a la tabla del final de este archivo.
-5. Commit: `Agrega tarjeta de <Nombre Apellido>`.
-6. Responder con la URL final de la tarjeta, que es lo que hay que grabar en el tag.
+4. Correr `python contactos.py <slug>` para generar `<slug>/contacto.vcf` (lo usa el botón
+   "Guardar contacto" en iPhone y como respaldo en Android).
+5. Agregar la línea a la tabla del final de este archivo.
+6. Commit: `Agrega tarjeta de <Nombre Apellido>`.
+7. Responder con la URL final de la tarjeta, que es lo que hay que grabar en el tag.
 
 ### "Cambiá el teléfono/cargo/mail de <persona>"
-Editar solo el campo correspondiente en el bloque `persona` de su `index.html`. Commit y push.
+Editar solo el campo correspondiente en el bloque `persona` de su `index.html`, volver a correr
+`python contactos.py <slug>` para regenerar su `contacto.vcf`. Commit y push.
 Los tags ya grabados no necesitan cambios.
 
 ### "Cambiá <algo del diseño>"
