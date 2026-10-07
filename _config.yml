@@ -1,0 +1,12 @@
+# GitHub Pages (Jekyll): no publicar nada que no sea una tarjeta.
+exclude:
+  - README.md
+  - CLAUDE.md
+  - "*.py"
+  - "*.scad"
+  - "*.xlsx"
+  - "*.txt"
+  - .gitignore
+  - fotos_originales/
+  - fotos_editadas/
+  - __pycache__/
