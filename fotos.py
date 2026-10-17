@@ -22,9 +22,12 @@ LADO = 600                      # px del cuadrado final
 HEADROOM = 0.10                 # aire sobre la cabeza, fracción del lado
 ZOOM = 6.0                      # lado del recorte = ZOOM × ancho de la cara
 ESPEJO = set()                     # personas cuya foto se voltea horizontalmente
+FADE = 0.24                       # alto del desvanecido del torso, fracción del lado
+FADE_POR_SLUG = {"lamenabar": 0.12}
 ZOOM_POR_SLUG = {                 # ajustes puntuales aprobados por el usuario (más alto = más lejos)
     "ecanullo": 5.0,
     "rparra": 3.4,
+    "lamenabar": 2.9,
 }
 FONDO_CENTRO = (0x4a, 0x4a, 0x4d)
 FONDO_BORDE = (0x14, 0x12, 0x10)
@@ -160,7 +163,7 @@ def procesar(src: Path, dst: Path):
     yy = np.linspace(0, 1, LADO)[:, None]
     esc = LADO / lado
     borde_inf = 1 - pad_b * esc / LADO                        # dónde termina la foto original
-    fade_y = np.clip((borde_inf - yy) / 0.24, 0, 1) ** 1.5    # 0 en ese borde, 1 un 24% más arriba
+    fade_y = np.clip((borde_inf - yy) / FADE_POR_SLUG.get(src.stem, FADE), 0, 1) ** 1.5    # 0 en ese borde, 1 un 24% más arriba
     xx = np.linspace(0, 1, LADO)[None, :]
     fade_x = np.ones_like(xx)
     if pad_l: fade_x = np.minimum(fade_x, np.clip((xx - pad_l * esc / LADO) / 0.10, 0, 1))
