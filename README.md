@@ -32,7 +32,7 @@ Las áreas de servicio están en el HTML (sección `<ul class="lista">`); son lo
 1. Crear un repo `petromark-tarjetas` (puede ser privado en plan Pro; público funciona siempre).
 2. Subir el contenido de `tarjeta-nfc/` a la raíz del repo.
 3. Settings → Pages → Source: `Deploy from a branch` → `main` / `/ (root)` → Save.
-4. En un minuto queda en `https://pmk-srl.github.io/petromark-tarjetas/rparra/`.
+4. En un minuto queda en `https://contacto.petromark.com.ar/rparra/`.
 
 ### Opción B — Cloudflare Pages
 Igual de simple: Workers & Pages → Create → Pages → Upload assets (arrastrar la carpeta).
@@ -45,15 +45,15 @@ Si controlan el DNS de `petromark.com.ar`, agregar un registro CNAME:
 |-------|-----------|----------------------------------------|
 | CNAME | `tarjeta` | `pmk-srl.github.io` (o el `.pages.dev`) |
 
-Luego en GitHub Pages → Custom domain → `tarjeta.petromark.com.ar`. Queda
-`https://tarjeta.petromark.com.ar/rparra/`. Conviene decidir esto ANTES de grabar los tags,
+Luego en GitHub Pages → Custom domain → `contacto.petromark.com.ar`. Queda
+`https://contacto.petromark.com.ar/rparra/`. Conviene decidir esto ANTES de grabar los tags,
 porque la URL grabada es la que va a durar años.
 
 ## 3. Grabar los tags
 
 App: **NFC Tools** (gratis, Android e iOS).
 
-1. Escribir → Agregar registro → **URL/URI** → pegar `https://tarjeta.petromark.com.ar/rparra/`.
+1. Escribir → Agregar registro → **URL/URI** → pegar `https://contacto.petromark.com.ar/rparra/`.
 2. Escribir → acercar el tag al celular (en iPhone, la antena está arriba; en Android suele estar en el centro/arriba de la tapa).
 3. Probar: bloquear el celular, acercar el tag → debe aparecer la notificación con el link.
 4. Opcional: Otros → **Bloquear tag** (solo lectura). Es irreversible: nadie puede regrabarlo, ni vos. Recomendable para las tarjetas que se entregan.

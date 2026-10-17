@@ -24,8 +24,8 @@ una carpeta con su `index.html`; un tag NFC en su tarjeta impresa apunta a esa U
 └── CLAUDE.md             este archivo
 ```
 
-URL base: `https://pmk-srl.github.io/petromark-tarjetas/` (o `https://tarjeta.petromark.com.ar/`
-si ya está el subdominio). La tarjeta de una persona queda en `<URL base>/<slug>/`.
+URL base: `https://contacto.petromark.com.ar/` (dominio propio; `https://pmk-srl.github.io/petromark-tarjetas/`
+redirige ahí). La tarjeta de una persona queda en `<URL base>/<slug>/`.
 
 ## Reglas para editar
 
@@ -113,23 +113,23 @@ de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos lo
 
 | Slug   | Nombre | Cargo | URL grabada en el tag |
 |--------|--------|-------|-----------------------|
-| `rparra` | Rolando Parra | Representante Técnico / I+D | `https://pmk-srl.github.io/petromark-tarjetas/rparra/` |
-| `jstalldecker` | Jorge Stalldecker | Gerente de Producto PC/PAT | `https://pmk-srl.github.io/petromark-tarjetas/jstalldecker/` |
-| `gtwardowski` | Gustavo Twardowski | Gerente General | `https://pmk-srl.github.io/petromark-tarjetas/gtwardowski/` |
-| `sacosta` | Sandro Acosta | Gerente de Producto END | `https://pmk-srl.github.io/petromark-tarjetas/sacosta/` |
-| `aacuna` | Andrea Acuña | Líder Técnico | `https://pmk-srl.github.io/petromark-tarjetas/aacuna/` |
-| `oamache` | Oriana Amache | Representante Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/oamache/` |
-| `lamenabar` | Luis Amenabar | Representante Técnico ILAP | `https://pmk-srl.github.io/petromark-tarjetas/lamenabar/` |
-| `ecanullo` | Emilio Canullo | Responsable Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/ecanullo/` |
-| `ldedios` | Lucio De Dios | Representante Técnico | `https://pmk-srl.github.io/petromark-tarjetas/ldedios/` |
-| `ggimenez` | Gonzalo Gimenez | Representante Técnico PC/PAT NOC | `https://pmk-srl.github.io/petromark-tarjetas/ggimenez/` |
-| `fibarra` | Fernando Ibarra | Responsable de Compras, Mantenimiento y Logística | `https://pmk-srl.github.io/petromark-tarjetas/fibarra/` |
-| `jjimenez` | Jose Jimenez | Representante Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/jjimenez/` |
-| `llinares` | Lizeth Linares | Líder Técnico en Corrosión/Protección Catódica | `https://pmk-srl.github.io/petromark-tarjetas/llinares/` |
-| `lohara` | Luis Ohara | Líder Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/lohara/` |
-| `apinto` | Alejandro Pinto | Líder Técnico PAT | `https://pmk-srl.github.io/petromark-tarjetas/apinto/` |
-| `nrojo` | Norman Rojo | Supervisor Técnico | `https://pmk-srl.github.io/petromark-tarjetas/nrojo/` |
-| `ftartaglia` | Fredy Tartaglia | Responsable Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/ftartaglia/` |
-| `dtorres` | Daniel Torres | Supervisor PC | `https://pmk-srl.github.io/petromark-tarjetas/dtorres/` |
-| `yturra` | Yerimen Turra | Responsable Técnico PC y PAT | `https://pmk-srl.github.io/petromark-tarjetas/yturra/` |
-| `mbertotto` | Mauricio Bertotto | Líder Técnico END | `https://pmk-srl.github.io/petromark-tarjetas/mbertotto/` |
+| `rparra` | Rolando Parra | Representante Técnico / I+D | `https://contacto.petromark.com.ar/rparra/` |
+| `jstalldecker` | Jorge Stalldecker | Gerente de Producto PC/PAT | `https://contacto.petromark.com.ar/jstalldecker/` |
+| `gtwardowski` | Gustavo Twardowski | Gerente General | `https://contacto.petromark.com.ar/gtwardowski/` |
+| `sacosta` | Sandro Acosta | Gerente de Producto END | `https://contacto.petromark.com.ar/sacosta/` |
+| `aacuna` | Andrea Acuña | Líder Técnico | `https://contacto.petromark.com.ar/aacuna/` |
+| `oamache` | Oriana Amache | Representante Técnico END | `https://contacto.petromark.com.ar/oamache/` |
+| `lamenabar` | Luis Amenabar | Representante Técnico ILAP | `https://contacto.petromark.com.ar/lamenabar/` |
+| `ecanullo` | Emilio Canullo | Responsable Técnico END | `https://contacto.petromark.com.ar/ecanullo/` |
+| `ldedios` | Lucio De Dios | Representante Técnico | `https://contacto.petromark.com.ar/ldedios/` |
+| `ggimenez` | Gonzalo Gimenez | Representante Técnico PC/PAT NOC | `https://contacto.petromark.com.ar/ggimenez/` |
+| `fibarra` | Fernando Ibarra | Responsable de Compras, Mantenimiento y Logística | `https://contacto.petromark.com.ar/fibarra/` |
+| `jjimenez` | Jose Jimenez | Representante Técnico END | `https://contacto.petromark.com.ar/jjimenez/` |
+| `llinares` | Lizeth Linares | Líder Técnico en Corrosión/Protección Catódica | `https://contacto.petromark.com.ar/llinares/` |
+| `lohara` | Luis Ohara | Líder Técnico END | `https://contacto.petromark.com.ar/lohara/` |
+| `apinto` | Alejandro Pinto | Líder Técnico PAT | `https://contacto.petromark.com.ar/apinto/` |
+| `nrojo` | Norman Rojo | Supervisor Técnico | `https://contacto.petromark.com.ar/nrojo/` |
+| `ftartaglia` | Fredy Tartaglia | Responsable Técnico END | `https://contacto.petromark.com.ar/ftartaglia/` |
+| `dtorres` | Daniel Torres | Supervisor PC | `https://contacto.petromark.com.ar/dtorres/` |
+| `yturra` | Yerimen Turra | Responsable Técnico PC y PAT | `https://contacto.petromark.com.ar/yturra/` |
+| `mbertotto` | Mauricio Bertotto | Líder Técnico END | `https://contacto.petromark.com.ar/mbertotto/` |
