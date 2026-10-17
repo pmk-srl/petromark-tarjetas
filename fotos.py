@@ -26,7 +26,7 @@ FADE = 0.24                       # alto del desvanecido del torso, fracción de
 FADE_POR_SLUG = {}
 ZOOM_POR_SLUG = {                 # ajustes puntuales aprobados por el usuario (más alto = más lejos)
     "ecanullo": 5.0,
-    "rparra": 3.4,
+    "rparra": 5.0,
     "lamenabar": 3.8,
 }
 FONDO_CENTRO = (0x4a, 0x4a, 0x4d)
