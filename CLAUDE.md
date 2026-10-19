@@ -123,6 +123,7 @@ de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos lo
 | `ecanullo` | Emilio Canullo | Responsable Técnico END | `https://contacto.petromark.com.ar/ecanullo/` |
 | `ldedios` | Lucio De Dios | Representante Técnico | `https://contacto.petromark.com.ar/ldedios/` |
 | `ggimenez` | Gonzalo Gimenez | Representante Técnico PC/PAT NOC | `https://contacto.petromark.com.ar/ggimenez/` |
+| `fibarra` | Fernando Ibarra | Responsable de Compras, Mantenimiento y Logística | `https://contacto.petromark.com.ar/fibarra/` |
 | `jjimenez` | Jose Jimenez | Representante Técnico END | `https://contacto.petromark.com.ar/jjimenez/` |
 | `llinares` | Lizeth Linares | Líder Técnico en Corrosión/Protección Catódica | `https://contacto.petromark.com.ar/llinares/` |
 | `lohara` | Luis Ohara | Líder Técnico END | `https://contacto.petromark.com.ar/lohara/` |
