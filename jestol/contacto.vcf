@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Estol;Juan Manuel;;;
+FN:Juan Manuel Estol
+ORG:Petromark SRL
+TITLE:IT
+TEL;TYPE=CELL,VOICE:+542995272648
+EMAIL;TYPE=WORK:juan.estol@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD
