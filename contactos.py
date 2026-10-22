@@ -33,7 +33,7 @@ def vcard(p: dict) -> str:
         f"FN:{esc(p['nombre'])} {esc(p['apellido'])}",
         f"ORG:{esc(p['empresa'])}",
         f"TITLE:{esc(p['cargo'])}",
-        f"TEL;TYPE=CELL,VOICE:{p['telefono']}",
+        *([f"TEL;TYPE=CELL,VOICE:{p['telefono']}"] if p.get("telefono") else []),
         f"EMAIL;TYPE=WORK:{p['email']}",
         f"URL:{p['web']}",
         f"ADR;TYPE=WORK:;;{esc(p['direccion'])};;;;",

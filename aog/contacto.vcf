@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:SRL;Petromark;;;
+FN:Petromark SRL
+ORG:Petromark SRL
+TITLE:Recepción de CV e información empresarial
+EMAIL;TYPE=WORK:aog@petromark.com.ar
+URL:https://www.petromark.com.ar
+ADR;TYPE=WORK:;;Figueroa 1755\, Neuquén\, Argentina;;;;
+END:VCARD

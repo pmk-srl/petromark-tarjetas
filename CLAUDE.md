@@ -134,3 +134,4 @@ de VS Code. El navegador interno de VS Code (Simple Browser) no abre archivos lo
 | `yturra` | Yerimen Turra | Responsable Técnico PC y PAT | `https://contacto.petromark.com.ar/yturra/` |
 | `mbertotto` | Mauricio Bertotto | Líder Técnico END | `https://contacto.petromark.com.ar/mbertotto/` |
 | `jestol` | Juan Manuel Estol | IT | `https://contacto.petromark.com.ar/jestol/` |
+| `aog` | Petromark SRL (CV e información empresarial) | Recepción de CV e información empresarial | `https://contacto.petromark.com.ar/aog/` |
